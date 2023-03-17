@@ -5,6 +5,9 @@ class MyPlayer extends Player {
 
   /// Your program.
   start() {
+    while (true) {
+      
+    }
   }
 }
 

@@ -211,7 +211,7 @@ class Scenario {
 
   /// Returns a list with just the outline of all non-empty characters.
   List<String> _findOutline() {
-    if (positions.isEmpty) return List();
+    if (positions.isEmpty) return [];
 
     // Fill result list with empty Strings.
     List<List<String>> outlineLines =

@@ -5,10 +5,20 @@ class MyPlayer extends Player {
 
   /// Your program.
   start() {
+    while (!treeFront()) {
+      while (starFront()) {
+        move();
+      }
+      if (starLeft()) {
+        turnLeft();
+      } else if (starRight()) {
+        turnRight();
+      }
+    }
   }
 }
 
 
 main() {
-  createWorld('scenario-a.txt', MyPlayer());
+  createWorld('scenario-b.txt', MyPlayer());
 }

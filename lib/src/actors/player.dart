@@ -201,6 +201,24 @@ abstract class Player extends Actor {
     return world.getActorsAt(x, y).any((Actor a) => a is Star);
   }
 
+  bool starFront() {
+    return world
+        .getActorsInFront(x, y, direction)
+        .any((Actor a) => a is Star);
+  }
+
+  bool starLeft() {
+    return world
+        .getActorsInFront(x, y, _nextDirectionCounterclockwise)
+        .any((Actor a) => a is Star);
+  }
+
+  bool starRight() {
+    return world
+        .getActorsInFront(x, y, _nextDirectionClockwise)
+        .any((Actor a) => a is Star);
+  }
+
   /// Creates a speech bubble with the specified [text].
   ///
   /// The [seconds] specifies how long the text should appear on the screen.

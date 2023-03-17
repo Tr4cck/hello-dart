@@ -6,8 +6,14 @@ class MyPlayer extends Player {
   /// Your program.
   start() {
     while (canMove()) {
-
+      if (!onStar()) {
+        putStar();
+        move();
+      } else {
+        move();
+      }
     }
+    putStar();
   }
 }
 
